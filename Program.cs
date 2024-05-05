@@ -1,12 +1,26 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-using System;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 class Program  
 {
     static void Main()
     {
-        string[] array = ["peepo", "135", "rebyata", "9", "che"];
+        
+    }
+
+    static string[] filterArray(string[] array)
+    {
+        List<string> filteredList = new List<string> {};
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i].Length <= 3)
+            {
+                filteredList.Add(array[i]);
+            }
+        }
+        string[] filteredArray = filteredList.ToArray<string>();
+        return filteredArray;
     }
     static void printArray(string[] array)
     {
