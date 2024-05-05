@@ -6,7 +6,11 @@ class Program
 {
     static void Main()
     {
+        System.Console.Write("Введите строки через пробел: ");
+        string[] array = System.Console.ReadLine()!.Split(" ");
         
+        System.Console.Write("Массив, где каждая строка содержит 3 или меньше символов: ");
+        printArray(filterArray(array));
     }
 
     static string[] filterArray(string[] array)
